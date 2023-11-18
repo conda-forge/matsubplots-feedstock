@@ -1,5 +1,5 @@
 {% set name = "matsubplots" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a894a3944564e806515c7f404018a38cf395fa14ee2c670ca53ad948257033ef
+  sha256: ffa308535ee1b0b9bef2d32d5fa87721cc80d238fa09d033b53e4be8dce633a0
 
 build:
   noarch: python
