@@ -1,12 +1,13 @@
 {% set name = "matsubplots" %}
 {% set version = "1.3.0" %}
+{% set python_min = "3.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cfd918a823ddb95113d1469ecce041b794a212acc5117f2746922c6df6ae44e6
 
 build:
@@ -17,10 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
   run:
     - matplotlib-base
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
