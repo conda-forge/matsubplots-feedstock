@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=64
   run:
     - matplotlib-base
     - python >={{ python_min }}
