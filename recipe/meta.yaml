@@ -1,5 +1,5 @@
 {% set name = "matsubplots" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cfd918a823ddb95113d1469ecce041b794a212acc5117f2746922c6df6ae44e6
+  sha256: 54e611e4d15f31a073ebcc47bef437a801b33675ea7a03b8a2cc4fbd3047f58d
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=64
   run:
     - matplotlib-base
     - python >={{ python_min }}
